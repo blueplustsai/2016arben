@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">   
     <title>
-       雅敏有限公司123
-       
+       雅敏有限公司
     </title>
     <style type="text/css">
       body { padding-top: 49px; }
@@ -26,7 +25,18 @@
     <script>
 
 	$(document).ready(function() {
-
+      $("a").click(function() {
+        console.log($(this).attr("href"))
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+            scrollTop: $($(this).attr("href")).offset().top + "px"
+        }, {
+                duration: 500,
+                easing: "swing"
+          });
+ 
+        return false;
+        });
 	}); // end readyfile
 	</script>
 	
@@ -50,12 +60,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#">首頁</a></li>
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#pr_1">花邊裁切機</a></li>
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#pr_2">布樣圓切機</a></li>
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#pr_3">電子布重秤</a></li>
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#pr_4">布重秤</a></li>
-        <li><a data-toggle="collapse" data-target=".navbar-collapse"href="#contact">聯絡我們</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#">首頁</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#pr_1">花邊裁切機</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#pr_2">布樣圓切機</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#pr_3">電子布重秤</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#pr_4">布重秤</a></li>
+        <li><a data-toggle="collapse" data-target=".navbar-collapse" href="#contact">聯絡我們</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
 
